@@ -14,9 +14,10 @@ export async function show(hootId) {
   return sendRequest(`${BASE_URL}/${hootId}`);
 }
 
-export async function update(hootData, hootId) {
+export async function update(hootId, hootData) {
   return sendRequest(`${BASE_URL}/${hootId}`, "PUT", hootData);
 }
+
 export async function deleteHoot(hootId) {
   return sendRequest(`${BASE_URL}/${hootId}`, "DELETE");
 }
